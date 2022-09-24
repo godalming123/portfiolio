@@ -1,137 +1,152 @@
 <!DOCTYPE html>
 <html lang="en" style="animation: reveal 1s;">
+
 <head>
   <title>Hyprland</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="A dynamic tiling window manager that doesnt sacrifice on it looks" />
-	<link rel="stylesheet" type="text/css" href="style.css" />	
+  <link rel="stylesheet" type="text/css" href="style.css" />
   <link defer rel="manifest" href="manifest.json" />
-	<link rel="icon" href="icon.png">
-	<script defer type="module" src="index.js"></script>
+  <link rel="icon" href="icon.png">
+  <script defer type="module" src="index.js"></script>
   <style>
-				@keyframes reveal {
-								0% {
-												opacity: 0;
-												scale: 0.7;
-												clip-path: circle(0% at 50vw 50vh);
-								}
-								15% {
-												scale: 0.55;
-								}
-								100% {
-												scale: 1;
-												clip-path: circle(70% at 50vw 50vh);
-								}
-				}
+    @keyframes reveal {
+      0% {
+        opacity: 0;
+        scale: 0.7;
+        clip-path: circle(0% at 50vw 50vh);
+      }
+
+      15% {
+        scale: 0.55;
+      }
+
+      100% {
+        scale: 1;
+        clip-path: circle(70% at 50vw 50vh);
+      }
+    }
   </style>
 </head>
+
 <body id="top">
-				<div class="container">
-								<div class="content">
-												<div id="content"></div>
-												<div class="nav">
-																<svg class="nav-logo icon" fill="none" viewBox="0 0 32 42" xmlns="http://www.w3.org/2000/svg">
-																				<path fill="transparent" stroke="currentColor" stroke-width="6"
-																								d="M15 3
+  <div class="container">
+    <div class="content">
+      <div id="content"></div>
+      <div class="nav">
+        <svg class="nav-logo icon" fill="none" viewBox="0 0 32 42" xmlns="http://www.w3.org/2000/svg">
+          <path fill="transparent" stroke="currentColor" stroke-width="6" d="M15 3
 																								   Q16.5 6.8 25 18
 																								   A12.8 12.8 0 1 1 5 18
 																								   Q13.5 6.8 15 3z" />
-																</svg>
-																<a href="#top" class="nav-text">Hyprland</a>
-																<div class="nav-items">
-																				<a href="#about"                                  >About </a>
-																				<a href="https://github.com/hyprwm/Hyprland/wiki/">Docs  </a>
-																				<a href="https://github.com/hyprwm/hyprland"      >Github</a>
-																</div>
-																<a href="#sidenav">
-																				<svg class="nav-menu icon" width="90" height="65" viewBox="0 0 40 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-																								<line id="menuline1" y1="2.5" x2="40" y2="2.5" stroke="currentColor" stroke-width="5"/>
-																								<line id="menuline2" y1="17.5" x2="40" y2="17.5" stroke="currentColor" stroke-width="5"/>
-																								<line id="menuline3" y1="32.5" x2="40" y2="32.5" stroke="currentColor" stroke-width="5"/>
-																				</svg>
-																</a>
-												</div>
+        </svg>
+        <a href="#top" class="nav-text">Hyprland</a>
+        <div class="nav-items">
+          <a href="#about">About</a>
+          <a href="https://github.com/hyprwm/Hyprland/wiki/">Docs</a>
+          <a href="https://github.com/hyprwm/hyprland">Github</a>
+        </div>
+        <a href="#sidenav">
+          <svg class="nav-menu icon" width="90" height="65" viewBox="0 0 40 35" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <line id="menuline1" y1="2.5" x2="40" y2="2.5" stroke="currentColor" stroke-width="5" />
+            <line id="menuline2" y1="17.5" x2="40" y2="17.5" stroke="currentColor" stroke-width="5" />
+            <line id="menuline3" y1="32.5" x2="40" y2="32.5" stroke="currentColor" stroke-width="5" />
+          </svg>
+        </a>
+      </div>
 
-												<div class="hero">
-																<div>
-																				<!--<div class="hero-title-container">
-																								<h1 class="hero-title hero-title-1">Web Developer</h1>
-																								<h1 class="hero-title hero-title-2">App Designer</h1>
-																								<h1 class="hero-title hero-title-3">Programmer</h1>
-																								<h1 class="hero-title hero-title-4">Collaborator</h1>
-																								<h1 class="hero-title hero-title-5">Web Freelancer</h1>
-																				</div>-->
-																				<h1>test</h1>
-																				<p>I’m a web devoloper designer and passionate freelancer with expertise in jekyll.</p>
-																				<a href="https://github.com/hyprwm/Hyprland/wiki/Installation" class="btn btn-primary">Contact Me   </a>
-																				<a href="https://github.com/hyprwm/Hyprland/wiki/Installation" class="btn            ">Visit my blog</a>
-																</div>
-																<img src="hyprland-rice.png" class="hero-image">
-												</div>
+      <div class="hero">
+        <div>
+          <!--<div class="hero-title-container">
+            <h1 class="hero-title hero-title-1">Web Developer</h1>
+            <h1 class="hero-title hero-title-2">App Designer</h1>
+            <h1 class="hero-title hero-title-3">Programmer</h1>
+            <h1 class="hero-title hero-title-4">Collaborator</h1>
+            <h1 class="hero-title hero-title-5">Web Freelancer</h1>
+          </div>-->
+          <h1>test</h1>
+          <p>I’m a web devoloper designer and passionate freelancer with expertise in jekyll.</p>
+          <a href="https://github.com/hyprwm/Hyprland/wiki/Installation" class="btn btn-primary">Contact Me </a>
+          <a href="https://github.com/hyprwm/Hyprland/wiki/Installation" class="btn            ">Visit my blog</a>
+        </div>
+        <img src="hyprland-rice.png" class="hero-image">
+      </div>
 
-												<svg class="wave wave-from-color-2 wave-to-color-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 20" preserveAspectRatio="none" shape-rendering="auto">
-																				<path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
-												</svg>
+      <svg class="wave bg-color-2 wave-to-color-1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 20" preserveAspectRatio="none"
+        shape-rendering="auto">
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </svg>
 
-												<section class="about" id="about">
-																<h1>About</h1>
-																<p>I'm a web developer designer and passionate freelancer with expertise in developing jekyll sites and PWA's. I also do design.</p>
-												</section>
+      <section class="about" id="about">
+        <h1>About</h1>
+        <p>I'm a web developer designer and passionate freelancer with expertise in developing jekyll sites and PWA's. I
+          also do design.</p>
+      </section>
 
-												<section id="skills" class="sticky-section bg-color-2">
-																<div class="sticky-end">
-																				<h1>skills</h1>
-																				<p>see my skills</p>
-																</div>
-																<div class="items-end">
-																				<div class="item">
-																								<h2>Jekyll</h2>
-																								<p>I have built many sites in jekyll</p>
-																				</div>
-																				<div class="item">
-																								<h2>Matirilize CSS</h2>
-																				</div>
-																				<div class="item">
-																								<h2>Svelte</h2>
-																				</div>
-																				<div class="item">
-																								<h2>React</h2>
-																				</div>
+      <svg class="wave bg-color-1 wave-to-color-2" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 20" preserveAspectRatio="none"
+        shape-rendering="auto">
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </svg>
 
-																</div>
-												</section>
+      <section id="skills" class="sticky-section bg-color-2">
+        <div class="sticky-end">
+          <h1>skills</h1>
+          <p>see my skills</p>
+        </div>
+        <div class="items-end">
+          <div class="item">
+            <h2>Jekyll</h2>
+            <p>I have built many sites in jekyll</p>
+          </div>
+          <div class="item">
+            <h2>Matirilize CSS</h2>
+          </div>
+          <div class="item">
+            <h2>Svelte</h2>
+          </div>
+          <div class="item">
+            <h2>React</h2>
+          </div>
 
-												<section id="skills" class="sticky-section bg-color-2">
-																<div class="sticky-end">
-																				<h1>Projects</h1>
-																				<p>see my projects</p>
-																</div>
-																<div class="items-end">
-																			<div class="item">
-																								<h2>Jekyll</h2>
-																								<p>I have built many sites in jekyll</p>
-																				</div>
-																				<div class="item">
-																								<h2>Matirilize CSS</h2>
-																				</div>
-																				<div class="item">
-																								<h2>Svelte</h2>
-																				</div>
-																				<div class="item">
-																								<h2>React</h2>
-																				</div>
+        </div>
+      </section>
 
-																</div>
-												</section>
-								</div>
-								<div class="sidenav" id="sidenav">
-												<a class="back-btn" href="#content">< Back</a>
-												<h1>Pages</h1>
-												<a href="#about"                                  >About </a>
-												<a href="https://github.com/hyprwm/Hyprland/wiki/">Docs  </a>
-												<a href="https://github.com/hyprwm/hyprland"      >Github</a>
-								</div>
-				</div>
+      <section id="skills" class="sticky-section bg-color-2">
+        <div class="sticky-end">
+          <h1>Projects</h1>
+          <p>see my projects</p>
+        </div>
+        <div class="items-end">
+          <div class="item">
+            <h2>Jekyll</h2>
+            <p>I have built many sites in jekyll</p>
+          </div>
+          <div class="item">
+            <h2>Matirilize CSS</h2>
+          </div>
+          <div class="item">
+            <h2>Svelte</h2>
+          </div>
+          <div class="item">
+            <h2>React</h2>
+          </div>
+
+        </div>
+      </section>
+    </div>
+    <div class="sidenav" id="sidenav">
+      <a class="back-btn" href="#content">
+        < Back</a>
+          <h1>Pages</h1>
+          <a href="#about">About</a>
+          <a href="https://github.com/hyprwm/Hyprland/wiki/">Docs</a>
+          <a href="https://github.com/hyprwm/hyprland">Github</a>
+    </div>
+  </div>
 </body>
+
 </html>
