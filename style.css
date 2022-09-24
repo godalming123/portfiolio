@@ -113,20 +113,15 @@ p {
 /* === HERO === */
 
 .hero {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				flex-wrap: wrap;
 				background-color: var(--bg2);
 				text-align: center;
 }
 
 .hero > * {
-				margin: 1em;
+				margin: 1em auto;
 }
 
-.hero > div {
-						width: 30em;
+.hero > div {/* the text in hero */
 						width: 30em;
 						max-width: calc(100vw - 2em) !important;
 }
@@ -216,11 +211,23 @@ p {
   height: 15vh;
   min-height: 100px;
   max-height: 150px;
-	padding: 0;
+  padding: 0;
 }
 
-.bg-color-2 {
-	background-color: var(--bg2);
+.wave-from-color-2 {
+	background-color: var(--bg2)
+}
+
+.wave-from-color-1 {
+	background-color: var(--bg1)
+}
+
+.wave-to-color-2 > #wave-path {
+	fill: var(--bg2);
+}
+
+.wave-to-color-1 > #wave-path {
+	fill: var(--bg1);
 }
 
 #wave-path {
