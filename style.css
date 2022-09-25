@@ -52,7 +52,7 @@ body {
   padding: 1em 2em;
 }
 
-#content {/* remoe padding on the div used to go to back from menu*/
+#top {/* remoe padding on the div used to go to the top*/
   padding: 0;
 }
 
@@ -63,6 +63,18 @@ section {
 a {
   color: var(--fg);
   text-decoration: none;
+}
+
+a[href^="https://"]::after {
+  content: "";
+  width: 11px;
+  height: 11px;
+  margin-left: 4px;
+  background-image: url("external-link.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
 }
 
 img {
