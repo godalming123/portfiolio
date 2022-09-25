@@ -387,8 +387,7 @@ p {
   .container {
     /* the container to our content and sidebar colums */
     display: flex;
-    overflow-y: auto;
-    height: 100vh; /*height must be set for scroll containers to work winth position sticky*/
+    height: 100vh; /*height must be set for scroll containers to work with position sticky*/
     overflow-x: auto;
     scroll-snap-type: x mandatory;
   }
@@ -397,16 +396,14 @@ p {
     scroll-snap-align: start;
     scroll-snap-type: x;
     min-width: 100vw; /* force the content to be all the screen width */
-    height: min-content; /* force content to be bigger then its parent scroll container */
+    overflow-y: auto;
   }
 
   .sidenav {
     text-align: center;
-    position: sticky;
     top: 0;
     margin: 0;
     max-height: 100vh;
-    overflow-y: auto;
   }
 
   .sidenav > a {
