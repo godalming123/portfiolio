@@ -131,8 +131,7 @@ p {
 
 .hero > div {
   /* the text in hero */
-  width: 30em;
-  max-width: calc(100vw - 2em) !important;
+  max-width: 30em;
 }
 
 .hero-title {
