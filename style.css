@@ -65,16 +65,39 @@ a {
   text-decoration: none;
 }
 
+@keyframes external-icon {
+  0% {
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 100%, 50% 50%, 0 50%);
+  }
+  50% {
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 100% 50%, 100% 0%, 50% 0%);
+  }
+  51% {
+    clip-path: polygon(0% 50%, 50% 50%, 50% 100%, 50% 100%, 50% 50%, 0 50%);
+  }
+  100% {
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 100%, 50% 50%, 0 50%);
+  }
+}
+
+a[href^="https://"]:hover::after {
+  animation-name: external-icon;
+  animation-duration: 0.3s;
+}
+
 a[href^="https://"]::after {
-  content: "";
-  width: 11px;
-  height: 11px;
+  width: 16px;
+  height: 16px;
   margin-left: 4px;
-  background-image: url("external-link.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: currentColor;
+  content: "";
   display: inline-block;
+  clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 100%, 50% 50%, 0 50%);
+}
+
+#link-path {
+  color: var(--fg);
+  fill: var(--fg);
 }
 
 img {
