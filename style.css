@@ -89,7 +89,7 @@ a[href^="https://"]::after {
   width: 1em;
   height: 1em;
   margin-left: 4px;
-  background-color: var(--fg);
+  background-color: currentColor;
   content: "";
   display: inline-block;
   clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 100%, 50% 50%, 0 50%);
@@ -127,15 +127,9 @@ img {
   filter: brightness(80%);
 }
 
-.btn-primary {
-  background-color: var(--c4);
-  color: black;
-}
-
-.btn-secondary {
-  background-color: var(--c5);
-  color: black;
-}
+.btn-primary   {background-color: var(--c4);}
+.btn-secondary {background-color: var(--c5);}
+.btn-primary, .btn-secondary {color: black;}
 
 /* === TYPOGRAPHY === */
 
