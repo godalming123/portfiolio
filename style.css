@@ -89,7 +89,7 @@ a[href^="https://"]::after {
   width: 1em;
   height: 1em;
   margin-left: 4px;
-  background-color: currentColor;
+  background-color: currentColor; /* uses the color property */
   content: "";
   display: inline-block;
   clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 100%, 50% 50%, 0 50%);
