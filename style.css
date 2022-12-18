@@ -52,7 +52,7 @@ body {
   padding: 1em 2em;
 }
 
-#top {/* remoe padding on the div used to go to the top*/
+#top {/* remove padding on the div used to go to the top*/
   padding: 0;
 }
 
@@ -86,10 +86,10 @@ a[href^="https://"]:hover::after {
 }
 
 a[href^="https://"]::after {
-  width: 16px;
-  height: 16px;
+  width: 1em;
+  height: 1em;
   margin-left: 4px;
-  background-color: currentColor;
+  background-color: var(--fg);
   content: "";
   display: inline-block;
   clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 100%, 50% 50%, 0 50%);
