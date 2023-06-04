@@ -363,27 +363,16 @@ p {
   }
 }
 
-#menuline1 {
-  animation-delay: 0s;
-}
 #menuline2 {
   animation-delay: 0.1s;
 }
-#menuline3 {
-  animation-delay: 0.2s;
+
+.nav-menu > * {
+	transform-origin: center;
 }
 
-#menuline1,
-#menuline2,
-#menuline3 {
-  transform-origin: center;
-}
-
-.nav-menu:hover #menuline1,
-.nav-menu:hover #menuline2,
-.nav-menu:hover #menuline3 {
-  animation-name: scale;
-  animation-duration: 0.3s;
+.nav-menu:hover > * {
+  animation: scale 0.3s;
 }
 
 /* === RESPONSIVE === */
