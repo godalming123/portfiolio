@@ -76,7 +76,6 @@ img {
   background-color: var(--bg4);
   border-radius: 0.5rem;
   transition: 0.3s;
-  display: inline-block;
 }
 
 .btn:hover {
@@ -111,11 +110,6 @@ p {
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;
-}
-
-.hero > h1, .hero > a {
-  /* the text in hero */
-  max-width: 30em;
 }
 
 .hero > a.btn {
@@ -184,7 +178,6 @@ p {
   position: sticky;
   z-index: 10;
   top: 0;
-  backdrop-filter: blur(5px);
   background-color: var(--bg2);
   padding: 1em 2em;
 }
@@ -278,7 +271,7 @@ p {
   .sticky-section > .items-end {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 }
 
@@ -290,12 +283,6 @@ p {
 }
 
 /* === OTHER === */
-
-.center {
-  display: grid;
-  justify-content: center;
-  text-align: center;
-}
 
 #content {
   position: sticky;
@@ -398,13 +385,5 @@ p {
   }
   .sidenav {
     display: none;
-  }
-}
-
-/* desktop displays and bigger */
-@media (min-width: 67em) {
-  .nav-text {
-    display: block;
-    flex-grow: 0;
   }
 }
