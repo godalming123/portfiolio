@@ -1,10 +1,6 @@
 /* === COLORS === */
 
 :root {
-  --bg1trans: #2e344066;
-  --bg2trans: #3b425266;
-  --bg3trans: #434c5e66;
-  --bg4trans: #4c566a66;
   --bg1: #2e3440;
   --bg2: #3b4252;
   --bg3: #434c5e;
@@ -18,10 +14,6 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg1trans: #ffffff66;
-    --bg2trans: #eceff266;
-    --bg3trans: #e5e9f066;
-    --bg4trans: #d8dee966;
     --bg1: #ffffff;
     --bg2: #eceff4;
     --bg3: #e5e9f0;
@@ -52,7 +44,7 @@ body {
   padding: 1em 2em;
 }
 
-#top {/* remove padding on the div used to go to the top*/
+#top {
   padding: 0;
 }
 
@@ -63,41 +55,6 @@ section {
 a {
   color: var(--fg);
   text-decoration: none;
-}
-
-@keyframes external-icon {
-  0% {
-    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 100%, 50% 50%, 0 50%);
-  }
-  50% {
-    clip-path: polygon(50% 0, 100% 0, 100% 50%, 100% 50%, 100% 0%, 50% 0%);
-  }
-  51% {
-    clip-path: polygon(0% 50%, 50% 50%, 50% 100%, 50% 100%, 50% 50%, 0 50%);
-  }
-  100% {
-    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 100%, 50% 50%, 0 50%);
-  }
-}
-
-a[href^="https://"]:hover::after {
-  animation-name: external-icon;
-  animation-duration: 0.3s;
-}
-
-a[href^="https://"]::after {
-  width: 1em;
-  height: 1em;
-  margin-left: 4px;
-  background-color: currentColor; /* uses the color property */
-  content: "";
-  display: inline-block;
-  clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 100%, 50% 50%, 0 50%);
-}
-
-#link-path {
-  color: var(--fg);
-  fill: var(--fg);
 }
 
 img {
@@ -151,7 +108,6 @@ p {
 
 .hero {
   background-color: var(--bg2);
-  text-align: center;
 }
 
 .hero > * {
@@ -171,37 +127,32 @@ p {
 .hero-image {
   max-height: 50vh;
   border-radius: 0.4em;
-  animation: float 5s ease-in-out 0s infinite;
 }
 
 /* === HERO TEXT ANIMATION === */
 
-.hero-title-1 {
+.hero-title:nth-child(1) {
   animation: openClose var(--total-time) -10s infinite;
 }
-.hero-title-2 {
+.hero-title:nth-child(2) {
   animation: openClose var(--total-time) -50s infinite;
 }
-.hero-title-3 {
+.hero-title:nth-child(3) {
   animation: openClose var(--total-time) -40s infinite;
 }
-.hero-title-4 {
+.hero-title:nth-child(4) {
   animation: openClose var(--total-time) -30s infinite;
 }
-.hero-title-5 {
+.hero-title:nth-child(5) {
   animation: openClose var(--total-time) -20s infinite;
 }
 
 .hero-title {
-  position: absolute;
-  width: inherit;
+  grid: 1/1;
 }
 
 .hero-title-container {
-  height: 3em;
-  width: 30em;
-  margin: auto;
-
+  display: grid;
   --total-time: 50s;
 }
 
@@ -229,7 +180,7 @@ p {
   z-index: 10;
   top: 0;
   backdrop-filter: blur(5px);
-  background-color: var(--bg2trans);
+  background-color: var(--bg2);
   padding: 1em 2em;
 }
 
@@ -367,6 +318,10 @@ p {
   animation-delay: 0.1s;
 }
 
+#menuline3 {
+  animation-delay: 0.2s;
+}
+
 .nav-menu > * {
 	transform-origin: center;
 }
@@ -395,7 +350,7 @@ p {
     font-size: 1.17em !important;
     padding: 1em 2em;
     display: block;
-    background-color: var(--bg2trans);
+    background-color: var(--bg1);
     top: 0;
     position: sticky;
     backdrop-filter: blur(5px);
@@ -404,7 +359,7 @@ p {
   .container {
     /* the container to our content and sidebar colums */
     display: flex;
-    height: 100vh; /*height must be set for scroll containers to work with position sticky*/
+    height: 100vh; /* height must be set for scroll containers to work with position sticky */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
   }

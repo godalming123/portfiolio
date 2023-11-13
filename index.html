@@ -6,7 +6,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="icon" href="icon.png">
 </head>
 
 <body>
@@ -14,19 +13,11 @@
     <div class="content" id="content">
       <div id="top"></div>
       <div class="nav">
-        <a href="#top" class="nav-logo">
-          <svg class=" icon" fill="none" viewBox="0 0 32 42" xmlns="http://www.w3.org/2000/svg">
-            <path fill="transparent" stroke="currentColor" stroke-width="6" d="M15 3
-																								   Q16.5 6.8 25 18
-																								   A12.8 12.8 0 1 1 5 18
-																								   Q13.5 6.8 15 3z" />
-          </svg>
-        </a>
-        <a href="#top" class="nav-text">Hyprland</a>
+        <a href="#top" class="nav-text">Portfiolio</a>
         <div class="nav-items">
           <a href="#about">About</a>
-          <a href="https://github.com/hyprwm/Hyprland/wiki/">Docs</a>
-          <a href="https://github.com/hyprwm/hyprland">Github</a>
+          <a href="#skills">Skills</a>
+          <a href="#services">Services</a>
         </div>
         <a href="#sidenav">
           <svg class="nav-menu icon" width="90" height="65" viewBox="0 0 40 35" fill="none"
@@ -38,22 +29,19 @@
         </a>
       </div>
 
-      <div class="hero">
+      <section class="hero">
+        <img src="https://integressinc.com/wp-content/uploads/2020/07/screen_2x-1.jpg" class="hero-image">
         <div>
-          <!--<div class="hero-title-container">
-            <h1 class="hero-title hero-title-1">Web Developer</h1>
-            <h1 class="hero-title hero-title-2">App Designer</h1>
-            <h1 class="hero-title hero-title-3">Programmer</h1>
-            <h1 class="hero-title hero-title-4">Collaborator</h1>
-            <h1 class="hero-title hero-title-5">Web Freelancer</h1>
-          </div>-->
-          <h1>test</h1>
-          <p>I’m a web devoloper designer and passionate freelancer with expertise in jekyll.</p>
-          <a href="https://github.com/hyprwm/Hyprland/wiki/Installation" class="btn btn-primary">Contact Me</a>
-          <a href="https://github.com/hyprwm/Hyprland/wiki/Installation" class="btn            ">Visit my blog</a>
+          <div class="hero-title-container">
+            <h1 class="hero-title">Web Developer</h1>
+            <h1 class="hero-title">App Designer</h1>
+            <h1 class="hero-title">Programmer</h1>
+            <h1 class="hero-title">Collaborator</h1>
+            <h1 class="hero-title">Web Freelancer</h1>
+          </div>
+          <a href="mailto: r2hk9ahnf@relay.firefox.com" class="btn btn-primary">Contact Me</a>
         </div>
-        <img src="hyprland-rice.png" class="hero-image">
-      </div>
+      </section>
 
       <svg class="wave bg-color-2 wave-to-color-1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 20" preserveAspectRatio="none"
@@ -63,8 +51,7 @@
 
       <section class="about" id="about">
         <h1>About</h1>
-        <p>I'm a web developer designer and passionate freelancer with expertise in developing jekyll sites and PWA's. I
-          also do design.</p>
+        <p>I’m a web devoloper designer and passionate freelancer with a fair amount of experience.</p>
       </section>
 
       <svg class="wave bg-color-1 wave-to-color-2" xmlns="http://www.w3.org/2000/svg"
@@ -74,58 +61,49 @@
       </svg>
 
       <section id="skills" class="sticky-section bg-color-2">
-        <div class="sticky-end">
-          <h1>skills</h1>
-          <p>see my skills</p>
-        </div>
+        <h1 class="sticky-end">Skills</h1>
         <div class="items-end">
           <div class="item">
-            <h2>Jekyll</h2>
-            <p>I have built many sites in jekyll</p>
+            <h2>Adding animations</h2>
+            <p>I enjoy animating website elements to keep a user engaged.</p>
           </div>
           <div class="item">
-            <h2>Matirilize CSS</h2>
+            <h2>Offline functionality</h2>
+            <p>I know how to make websites that work entirly offline.</p>
           </div>
           <div class="item">
-            <h2>Svelte</h2>
+            <h2>Fast websites</h2>
+            <p>I always try to make websites as fast as possible.</p>
           </div>
-          <div class="item">
-            <h2>React</h2>
-          </div>
-
         </div>
       </section>
 
-      <section id="skills" class="sticky-section bg-color-2">
-        <div class="sticky-end">
-          <h1>Projects</h1>
-          <p>see my projects</p>
-        </div>
+      <section id="services" class="sticky-section bg-color-2">
+        <h1 class="sticky-end">Services</h1>
         <div class="items-end">
           <div class="item">
-            <h2>Jekyll</h2>
-            <p>I have built many sites in jekyll</p>
+            <h2>Blog development</h2>
+            <p>Blogs are a great place to showcase what your doing, making or thinking about online.</p>
           </div>
           <div class="item">
-            <h2>Matirilize CSS</h2>
+            <h2>App design</h2>
+            <p>I can create interactive prototypes for apps in a design tool called figma.</p>
           </div>
           <div class="item">
-            <h2>Svelte</h2>
+            <h2>Simple site development</h2>
+            <p>I can develop simple but effective sites like the one that your looking at right now. They come with a few sections, lots of animations and work well on desktops and mobile devices.</p>
           </div>
-          <div class="item">
-            <h2>React</h2>
-          </div>
-
         </div>
       </section>
     </div>
+
     <div class="sidenav" id="sidenav">
       <a class="back-btn" href="#content">
         < Back</a>
           <h1>Pages</h1>
           <a href="#about">About</a>
-          <a href="https://github.com/hyprwm/Hyprland/wiki/">Docs</a>
-          <a href="https://github.com/hyprwm/hyprland">Github</a>
+          <a href="#skills">Skills</a>
+          <a href="#services">Services</a>
     </div>
   </div>
 </body>
