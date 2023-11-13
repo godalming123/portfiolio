@@ -75,7 +75,7 @@ img {
   padding: 0.5em 1em;
   margin: 0.1em;
   background-color: var(--bg4);
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
   transition: 0.3s;
   display: inline-block;
 }
@@ -119,6 +119,10 @@ p {
   max-width: 30em;
 }
 
+.hero > div > a.btn {
+  font-size: 1.2rem;
+}
+
 .hero-title {
   font-size: 3em;
   margin: 0px;
@@ -126,7 +130,7 @@ p {
 
 .hero-image {
   max-height: 50vh;
-  border-radius: 0.4em;
+  border-radius: 0.5rem;
 }
 
 /* === HERO TEXT ANIMATION === */
@@ -149,6 +153,7 @@ p {
 
 .hero-title {
   grid-row: 1/1;
+  grid-column: 1/1;
 }
 
 .hero-title-container {
@@ -353,7 +358,6 @@ p {
     background-color: var(--bg1);
     top: 0;
     position: sticky;
-    backdrop-filter: blur(5px);
   }
 
   .container {
