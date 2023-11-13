@@ -157,6 +157,7 @@ p {
 
 .hero-title-container {
   display: grid;
+  align-items: center;
   --total-time: 50s;
 }
 
