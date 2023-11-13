@@ -73,7 +73,6 @@ img {
 
 .btn {
   padding: 0.5em 1em;
-  margin: 0.1em;
   background-color: var(--bg4);
   border-radius: 0.5rem;
   transition: 0.3s;
@@ -108,18 +107,18 @@ p {
 
 .hero {
   background-color: var(--bg2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
 }
 
-.hero > * {
-  margin: 1em auto;
-}
-
-.hero > div {
+.hero > h1, .hero > a {
   /* the text in hero */
   max-width: 30em;
 }
 
-.hero > div > a.btn {
+.hero > a.btn {
   font-size: 1.2rem;
 }
 
