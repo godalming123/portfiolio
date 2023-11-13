@@ -148,7 +148,7 @@ p {
 }
 
 .hero-title {
-  grid: 1/1;
+  grid-row: 1/1;
 }
 
 .hero-title-container {
@@ -265,7 +265,7 @@ p {
 
   .sticky-section > .sticky-end {
     position: sticky;
-    top: 3em;
+    top: 4rem;
     height: min-content;
     min-width: 30vw;
   }
