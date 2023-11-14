@@ -4,12 +4,8 @@
   --bg1: #2e3440;
   --bg2: #3b4252;
   --bg3: #434c5e;
-  --bg4: #4c566a;
   --fg: #ffffff;
-  --c1: #bf616a;
-  --c2: #d08770;
-  --c3: #ebcb8b;
-  --c4: #a3be8c;
+  --accent: #a3be8c;
 }
 
 @media (prefers-color-scheme: light) {
@@ -17,12 +13,8 @@
     --bg1: #ffffff;
     --bg2: #eceff4;
     --bg3: #e5e9f0;
-    --bg4: #d8dee9;
     --fg: #000000;
-    --c1: #5e81ac;
-    --c2: #81a1c1;
-    --c3: #8fbcbb;
-    --c4: #88c0d0;
+    --accent: #88c0d0;
   }
 }
 
@@ -40,16 +32,9 @@ body {
   margin: 0;
 }
 
-.content > * {
-  padding: 1em 2em;
-}
-
-#top {
-  padding: 0;
-}
-
 section {
   text-align: center;
+  padding: 1rem;
 }
 
 a {
@@ -61,30 +46,13 @@ img {
   max-width: 100%;
 }
 
-.bg-color-2 {
-  background-color: var(--bg2);
-}
-
 .bg-color-1 {
   background-color: var(--bg1);
 }
 
-/* === BTNS === */
-
-.btn {
-  padding: 0.5em 1em;
-  background-color: var(--bg4);
-  border-radius: 0.5rem;
-  transition: 0.3s;
+.bg-color-2 {
+  background-color: var(--bg2);
 }
-
-.btn:hover {
-  filter: brightness(80%);
-}
-
-.btn-primary   {background-color: var(--c4);}
-.btn-secondary {background-color: var(--c5);}
-.btn-primary, .btn-secondary {color: black;}
 
 /* === TYPOGRAPHY === */
 
@@ -95,7 +63,7 @@ img {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 p {
@@ -112,60 +80,55 @@ p {
   align-items: center;
 }
 
-.hero > a.btn {
-  font-size: 1.2rem;
-}
-
-.hero-title {
-  font-size: 3em;
-  margin: 0px;
-}
-
 .hero-image {
   max-height: 50vh;
   border-radius: 0.5rem;
 }
 
+.hero-title {
+  font-size: 3rem;
+  margin: 0px;
+}
+
+.hero-btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.hero-btn:hover {
+  filter: brightness(80%);
+}
+
 /* === HERO TEXT ANIMATION === */
 
-.hero-title:nth-child(1) {
-  animation: openClose var(--total-time) -10s infinite;
-}
-.hero-title:nth-child(2) {
-  animation: openClose var(--total-time) -50s infinite;
-}
-.hero-title:nth-child(3) {
-  animation: openClose var(--total-time) -40s infinite;
-}
-.hero-title:nth-child(4) {
-  animation: openClose var(--total-time) -30s infinite;
-}
-.hero-title:nth-child(5) {
-  animation: openClose var(--total-time) -20s infinite;
-}
+.hero-title:nth-child(1) {animation-delay: -40s;}
+.hero-title:nth-child(2) {animation-delay: -30s;}
+.hero-title:nth-child(3) {animation-delay: -20s;}
+.hero-title:nth-child(4) {animation-delay: -10s;}
 
 .hero-title {
   grid-row: 1/1;
   grid-column: 1/1;
+  animation: openClose 40s infinite;
 }
 
 .hero-title-container {
   display: grid;
   align-items: center;
-  --total-time: 50s;
 }
 
 @keyframes openClose {
-  0%,
-  9% {
+  0% {
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   }
-  12%,
-  28% {
+  5%, 20% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
-  31%,
-  100% {
+  25%, 100% {
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   }
 }
@@ -179,7 +142,7 @@ p {
   z-index: 10;
   top: 0;
   background-color: var(--bg2);
-  padding: 1em 2em;
+  padding: 1rem;
 }
 
 .nav-text {
@@ -233,22 +196,6 @@ p {
   }
 }
 
-/* === ABOUT SECTION ANIMATION === */
-
-.about {
-  animation: float-large 5s ease-in-out infinite;
-}
-
-@keyframes float-large {
-  0%,
-  100% {
-    transform: translateY(-1em);
-  }
-  50% {
-    transform: translateY(1em);
-  }
-}
-
 /* === STICKY  SECTIONS === */
 
 /* tablet displays and bigger */
@@ -267,19 +214,19 @@ p {
     height: min-content;
     min-width: 30vw;
   }
+}
 
-  .sticky-section > .items-end {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  }
+.sticky-section > .items-end {
+  flex: 1;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 .sticky-section > .items-end > .item {
   background-color: var(--bg3);
-  border-radius: 1em;
-  padding: 1em;
-  margin: 1em;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 
 /* === OTHER === */
@@ -306,13 +253,8 @@ p {
   }
 }
 
-#menuline2 {
-  animation-delay: 0.1s;
-}
-
-#menuline3 {
-  animation-delay: 0.2s;
-}
+#menuline2 {animation-delay: 0.1s;}
+#menuline3 {animation-delay: 0.2s;}
 
 .nav-menu > * {
 	transform-origin: center;
