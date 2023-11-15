@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>404 Page not found</title>
+  <title>404, Page not found</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-	<link rel="stylesheet" type="text/css" href="style.css" />
+  <style>
+:root {
+  --bg: #2e3440;
+  --fg: #ffffff;
+  --accent: #a3be8c;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --fg: #000000;
+    --accent: #88c0d0;
+  }
+}
+
+a {
+	color: var(--accent);
+}
+
+body {
+	background: var(--bg);
+	color: var(--fg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+  </style>
 </head>
 <body>
-				<div class="center">
-								<h1>404</h1>
-								<p>Page not found</p>
-								<a href="https://godalming123.github.io/portfiolio" class="btn btn-primary">Go home</a>
-				</div>
+  <h1>404</h1>
+  <p>Page not found, you could try <a href="https://godalming123.github.io/portfiolio" class="btn btn-primary">Go home</a></p>
 </body>
 </html>
