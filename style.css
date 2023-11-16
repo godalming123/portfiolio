@@ -46,6 +46,10 @@ img {
   max-width: 100%;
 }
 
+svg {
+  display: block; /* fixes a gap that is left after the svg wave elements */
+}
+
 .bg-color-1 {
   background-color: var(--bg1);
 }
